@@ -5,13 +5,15 @@
    border: none;
   border-bottom: 2px solid red;
 
-  width: 400PX;
+  width: 400px;
 }
 .searchLabel{
   display: block;
   font-weight: bold;
-  font-size: large;
-
+  font-size: xx-large;
+text-align: center;
+margin-bottom: 50px;
+margin-top: 40px;
 }
 .searchLabel:hover{
   color:red;
@@ -24,4 +26,15 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+}
+
+.custom-select{
+  border: 2px solid red;
+  float: right;
+  margin-right: 20%;
+  margin-top: 50px;
+}
+.SearchFieldCom{
+  margin-left: 10%;
+  display: inline;
 }
