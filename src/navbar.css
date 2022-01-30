@@ -1,0 +1,26 @@
+.switch-group{
+    float: right;
+    margin-right: 10%;
+}
+
+.switch {
+    position: fixed;
+    right:150px
+}
+
+#image {
+  animation: rotation 8s infinite linear;
+  background: transparent;
+  margin-left: 20px;
+}
+.a{
+    background-color: #dc3545;
+}
+@keyframes rotation {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(359deg);
+  }
+}

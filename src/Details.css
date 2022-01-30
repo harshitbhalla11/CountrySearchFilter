@@ -1,0 +1,21 @@
+.image {
+    position: fixed;
+    background: #00000050;
+    top:100px; right:100px ;
+    width: 420px;
+
+   padding: 20px;
+}
+.back-btn{
+  background-color: black;
+  color:white;
+  padding-left: 10px;
+  padding-right: 10px;
+  border-radius: 8px;
+  margin-left: 20px;
+  margin-bottom: 30px;
+  margin-top: 30px;
+}
+.content{
+  padding-left: 40px;
+}

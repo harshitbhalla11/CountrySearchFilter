@@ -1,40 +1,43 @@
-.searchFiled{
-  margin-top:50px;
-  margin-bottom:100px;
- 
-   border: none;
+.searchFiled {
+  margin-top: 50px;
+  margin-bottom: 100px;
+  border: none;
   border-bottom: 2px solid red;
-
   width: 400px;
 }
-.searchLabel{
+.searchFiled:focus {
+  outline: none !important;
+  box-shadow: 0 0 10px #eeb6b6;
+  border: none;
+  border-bottom: 2px dotted red;
+}
+.searchLabel {
   display: block;
   font-weight: bold;
   font-size: xx-large;
-text-align: center;
-margin-bottom: 50px;
-margin-top: 40px;
+  text-align: center;
+  margin-bottom: 50px;
+  margin-top: 40px;
 }
-.searchLabel:hover{
-  color:red;
-  
+.searchLabel:hover {
+  color: red;
 }
-.container{
+.container {
   display: flex;
 }
-.card-container{
+.card-container {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
 }
 
-.custom-select{
+.custom-select {
   border: 2px solid red;
   float: right;
   margin-right: 20%;
   margin-top: 50px;
 }
-.SearchFieldCom{
+.SearchFieldCom {
   margin-left: 10%;
   display: inline;
 }
