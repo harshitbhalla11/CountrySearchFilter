@@ -2,7 +2,7 @@ import "./App.css";
 import NavigationBar from "./NavBar";
 import SearchPage from "./SearchPage";
 import Details from "./Details";
-import { BrowserRouter as Router, Routes, Route, useParams } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { useEffect, useState } from "react";
 
 function App() {
@@ -15,7 +15,7 @@ function App() {
     }
     APIcalling();
   }, []);
-  const params = useParams();
+ 
   return (
     <>
       <NavigationBar />

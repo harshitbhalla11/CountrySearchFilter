@@ -1,6 +1,4 @@
-import BootstrapSwitchButton from 'bootstrap-switch-button-react'
 import { Image ,Navbar} from 'react-bootstrap'
-import { Link } from 'react-router-dom'
 import "./navbar.css"
 export default function NavigationBar(props) {
     return(
@@ -18,7 +16,7 @@ export default function NavigationBar(props) {
         alt=""
       />
    </a>
-  <BootstrapSwitchButton />
+ 
   </Navbar>
  
  

@@ -3,11 +3,6 @@
     margin-right: 10%;
 }
 
-.switch {
-    position: fixed;
-    right:150px
-}
-
 #image {
   animation: rotation 8s infinite linear;
   background: transparent;

@@ -36,7 +36,7 @@ export default function SearchPage(props) {
         );
       });
       setFilteredData(dataFilter);
-    },[ContinentFilter])
+    },[ContinentFilter,props.Data])
       let mainData =
       ContinentFilter && ContinentFilter !== "all"
         ? FilteredData

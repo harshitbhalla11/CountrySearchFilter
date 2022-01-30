@@ -1,14 +1,7 @@
 import React, { useState } from "react";
 import {Card, Row,Col} from "react-bootstrap";
 import "./CountryCard.css"
-import {
-  BrowserRouter as Router,
-  Routes,
-  Route,
-  Link,
-  useParams
-} from "react-router-dom";
-import Details from "./Details";
+
 
 function CountryCard(props) {
   
