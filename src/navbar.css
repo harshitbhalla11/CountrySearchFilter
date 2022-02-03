@@ -9,7 +9,7 @@
   margin-left: 20px;
 }
 .a{
-    background-color: #dc3545;
+    background-color: var(--navbar-background);
 }
 @keyframes rotation {
   from {
@@ -18,4 +18,10 @@
   to {
     transform: rotate(359deg);
   }
+}
+
+.navBar{
+  background-color: var(--navbar-background);
+  
+  border: 3px solid var(--navbar-border);
 }

@@ -6,9 +6,13 @@
 
    padding: 20px;
 }
-.back-btn{
-  background-color: black;
-  color:white;
+
+.content{
+  padding-left: 40px;
+  
+}
+
+#back-button{
   padding-left: 10px;
   padding-right: 10px;
   border-radius: 8px;
@@ -16,6 +20,6 @@
   margin-bottom: 30px;
   margin-top: 30px;
 }
-.content{
-  padding-left: 40px;
+#heading{
+  color: var(--text-Secondary);
 }

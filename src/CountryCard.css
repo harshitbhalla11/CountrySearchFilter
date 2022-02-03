@@ -1,25 +1,31 @@
 .countryImage{
     background-repeat: no-repeat;
-    height: 180px;
+    height: 189.33px;
     width: 286px;
 
 }
 .card{
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    box-shadow: var(--box-shadow);
+    
     width: 286px;
     height: 300px;
     margin: 30px;
     
-    
- 
-    
+     
 }
 .title{
     font-size: 20px;
     text-align: center;
+    color: var(--text-Secondary);
+    background-color: var(--card-background);
 }
 
 .text{
     font-size: 15px;
     text-align: center;
+    background-color: var(--card-background);
+}
+
+.card-body{
+    background-color: var(--card-background);
 }

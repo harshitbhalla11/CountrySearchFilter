@@ -14,12 +14,13 @@ const Details = (props) => {
           e.preventDefault();
           window.location.href = "/";
         }}
-        className="back-btn"
+        className="button"
+        id="back-button"
       >
         Back
       </button>
       <div className="content">
-      <h1>Details:</h1>
+      <h1 id="heading">Details:</h1>
       <img className="image" src={state.users.flags.svg} alt="" />
       <h4>Name :{state.users.name.common}</h4>
       <h4>Capital :{state.users.capital}</h4>

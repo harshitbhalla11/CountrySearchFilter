@@ -1,10 +1,11 @@
 import { Image ,Navbar} from 'react-bootstrap'
 import "./navbar.css"
+
 export default function NavigationBar(props) {
     return(
         <>
   
-  <Navbar bg="danger">
+  <Navbar className="navBar" >
   
    <a  className="a"href='/'>
       <Image
@@ -15,6 +16,7 @@ export default function NavigationBar(props) {
         id="image"
         alt=""
       />
+      
    </a>
  
   </Navbar>
