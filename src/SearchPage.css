@@ -1,0 +1,72 @@
+.search-page {
+    padding: 2rem;
+    background-color: var(--background);
+    color: var(--text-primary);
+  }
+  
+  .search-controls {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 2rem;
+  }
+  
+  .search-label {
+    flex: 1 1 100%;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--text-secondary);
+    margin-bottom: 0.5rem;
+  }
+  
+  .search-field-com {
+    display: flex;
+    align-items: center;
+    flex: 1;
+    max-width: 400px;
+    border: 1px solid var(--comp-color);
+    border-radius: 4px;
+    padding: 0.5rem;
+    background-color: var(--card-bg);
+  }
+  
+  .search-icon {
+    margin-right: 0.5rem;
+    color: var(--comp-color);
+  }
+  
+  .search-filed {
+    flex: 1;
+    border: none;
+    outline: none;
+    background: transparent;
+    font-size: 1rem;
+    color: var(--text-primary);
+  }
+  
+  .custom-select {
+    padding: 0.5rem;
+    border: 1px solid var(--comp-color);
+    border-radius: 4px;
+    background-color: var(--card-bg);
+    color: var(--text-primary);
+  }
+  
+  .card-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+  }
+  
+  .card-link {
+    text-decoration: none;
+    color: inherit;
+  }
+  
+  .label-icon {
+    margin-right: 0.5rem;
+    vertical-align: middle;
+  }
+  

@@ -2,7 +2,6 @@ import "./Details.css";
 import {  useLocation } from "react-router-dom";
 
 const Details = (props) => {
-  // name,region,subregion,area,timezones,capital,population
   const location = useLocation();
 
   const { state } = location;

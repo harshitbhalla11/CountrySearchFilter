@@ -2,81 +2,83 @@ import { useEffect, useState } from "react";
 import { FaSearchLocation } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import CountryCard from "./CountryCard";
-export default function SearchPage(props) {
-  let [FilteredData, setFilteredData] = useState([]);
-  let [Search, setSearch] = useState([]);
-  let [ContinentFilter, setContinentFilter] = useState("all");
+import "./SearchPage.css";
 
-  function inputValue(e) {
-    let input = e.target.value.toLowerCase();
-    setSearch(input);
-  }
-  function selectedValue(e) {
-    setContinentFilter(e);
-  }
+export default function SearchPage({ Data }) {
+  const [filteredData, setFilteredData] = useState([]);
+  const [search, setSearch] = useState("");
+  const [continentFilter, setContinentFilter] = useState("all");
 
   useEffect(() => {
-    const dataFilter = props.Data.filter((country) => {
-      return (
-        country.continents[0].toLowerCase().indexOf(ContinentFilter) !== -1
-      );
-    });
+    const dataFilter = Data.filter((country) =>
+      country.continents[0].toLowerCase().includes(continentFilter)
+    );
     setFilteredData(dataFilter);
-  }, [ContinentFilter, props.Data]);
-  let mainData =
-    ContinentFilter && ContinentFilter !== "all" ? FilteredData : props.Data;
+  }, [continentFilter, Data]);
+
+  const handleInputChange = (e) => {
+    setSearch(e.target.value.toLowerCase());
+  };
+
+  const handleSelectChange = (e) => {
+    setContinentFilter(e.target.value);
+  };
+
+  const mainData =
+    continentFilter && continentFilter !== "all" ? filteredData : Data;
+
+  const displayedData = mainData.filter((country) =>
+    country.name.common.toLowerCase().includes(search)
+  );
 
   return (
-    <>
-      <label className="searchLabel">Search Country</label>
-      <div className="SearchFieldCom">
-        <FaSearchLocation />
-        <input
-          type="text"
-          className="searchFiled"
-          onChange={(e) => inputValue(e)}
-        />
-      </div>
+    <div className="search-page">
+      <div className="search-controls">
+      <label className="search-label" htmlFor="countrySearch">
+  <FaSearchLocation className="label-icon" /> Search Country
+</label>
 
-      <select
-        onChange={(e) => {
-          selectedValue(e.target.value);
-        }}
-        className="custom-select"
-        aria-label="Filter Countries By Region"
-      >
-        <option value="all">Filter By Region</option>
-        <option value="asia">Asia</option>
-        <option value="africa">Africa</option>
-        <option value="north america">North America</option>
-        <option value="south america">South America</option>
-        <option value="antarctica">Antarctica</option>
-        <option value="oceania">Oceania </option>
-      </select>
-      <div className="card-container">
-        {mainData
-          .filter((country) => {
-            return country.name.common.toLowerCase().indexOf(Search) !== -1;
-          })
-          .map((users) => {
-            // region
-            return (
-              <Link
-                style={{ textDecoration: "none", color: "black" }}
-                to="/country"
-                state={{ users }}
-              >
-                <CountryCard
-                  keyValue={users.name.common}
-                  key={users.name.common}
-                  name={users.name.common}
-                  flag={users.flags.svg}
-                  population={users.population}
-                />
-              </Link>
-            );
-          })}
+        <div className="search-field-com">
+          <FaSearchLocation className="search-icon" />
+          <input
+            type="text"
+            id="countrySearch"
+            className="search-filed"
+            placeholder="Enter country name..."
+            onChange={handleInputChange}
+          />
+        </div>
+        <select
+          onChange={handleSelectChange}
+          className="custom-select"
+          aria-label="Filter Countries By Region"
+        >
+          <option value="all">Filter By Region</option>
+          <option value="asia">Asia</option>
+          <option value="africa">Africa</option>
+          <option value="north america">North America</option>
+          <option value="south america">South America</option>
+          <option value="antarctica">Antarctica</option>
+          <option value="oceania">Oceania</option>
+        </select>
       </div>
-    </>
+      <div className="card-container">
+        {displayedData.map((country) => (
+          <Link
+            key={country.name.common}
+            to="/country"
+            state={{ users: country }}
+            className="card-link"
+          >
+            <CountryCard
+              keyValue={country.name.common}
+              name={country.name.common}
+              flag={country.flags.svg}
+              population={country.population}
+            />
+          </Link>
+        ))}
+      </div>
+    </div>
   );
 }
