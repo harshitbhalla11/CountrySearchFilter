@@ -11,18 +11,18 @@
 }
 
 [data-theme="dark"] {
-  --background: #202124; 
+  --background: #0a192f; 
   --text-primary: #f1f1f1;
-  --text-secondary: #bb86fc;
-  --comp-color: #bb86fc;
+  --text-secondary: #64ffda;
+  --comp-color: #64ffda;
   --card-bg: #303134;
   --navbar-background: #1a1a1a;
   --button-background: #9048e9;
   --box-shadow: 0 4px 8px rgba(255, 255, 255, 0.1);
-  --navbar-border: #bb86fc;
+  --navbar-border: #64ffda;
 }
 
-*{
+body{
   
   padding: 0px;
   margin:0px;
@@ -31,7 +31,7 @@
   color:var(--text-Primary)
 }
 .app{
-  height: 1000px;
+  height: calc(100vh - 86px);
 
 }
 .button{
@@ -50,7 +50,6 @@
   z-index: 1;
 }
 .searchFiled {
-  margin-top: 50px;
   margin-bottom: 100px;
   border: none;
   border-bottom: 2px solid var(--comp-color);
@@ -86,8 +85,6 @@
 .custom-select {
   border: 2px solid var(--comp-color);
   float: right;
-  margin-right: 20%;
-  margin-top: 50px;
 }
 .SearchFieldCom {
   margin-left: 10%;

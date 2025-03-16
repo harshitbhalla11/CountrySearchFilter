@@ -1,0 +1,64 @@
+.Detailcontainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  background-color: var(--background);
+  height: calc(100vh - 86px);
+}
+
+.back-button {
+  background-color: var(--button-background);
+  color: var(--text-primary);
+  border: none;
+  border-radius: 8px;
+  padding: 10px 20px;
+  cursor: pointer;
+  align-self: flex-start;
+  margin-bottom: 20px;
+  box-shadow: var(--box-shadow);
+  transition: opacity 0.2s ease-in-out;
+}
+
+.back-button:hover {
+  opacity: 0.9;
+}
+
+.heading {
+  color: var(--text-secondary);
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.details-card {
+  background-color: var(--card-bg);
+  color: var(--text-primary);
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: var(--box-shadow);
+  max-width: 800px;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.flag {
+  flex: 1;
+  max-width: 300px;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+.details-info {
+  flex: 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.details-info h4 {
+  margin: 10px 0;
+  font-size: 1.1rem;
+}

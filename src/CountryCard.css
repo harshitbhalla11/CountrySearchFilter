@@ -4,7 +4,6 @@
     overflow: hidden;
     box-shadow: var(--box-shadow);
     transition: transform 0.2s ease-in-out;
-    margin: 1rem;
     width: 300px;
     height: 400px;
   }

@@ -55,14 +55,15 @@
   }
   
   .card-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 2rem;
+    display: flex;
+    gap: 3rem;
+    justify-content: start;
   }
   
   .card-link {
     text-decoration: none;
     color: inherit;
+    width: fit-content;
   }
   
   .label-icon {

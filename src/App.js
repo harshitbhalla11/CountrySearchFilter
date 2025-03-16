@@ -1,7 +1,7 @@
 import "./App.css";
 import NavigationBar from "./NavBar";
 import SearchPage from "./SearchPage";
-import Details from "./Details";
+import Details from "./CountryDetails";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
@@ -22,7 +22,7 @@ function App() {
   };
 
   return (
-    <div className="app" data-theme={theme}>
+<div className="app" data-theme={theme.isDark ? "dark" : "light"}>
       <NavigationBar switchTheme={switchTheme} />
       <Router>
         <Routes>
